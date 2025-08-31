@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Soft UI Dashboard - A beautiful dashboard template with a soft UI design">
+    <meta name="theme-color" content="#ffffff">
+    <title>FEHU Dashboard</title>
+    <!-- Preload critical assets -->
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3 class="logo">FEHU Oil and Gas</h3>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="sidebar-content">
+                <ul class="nav-menu">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tables.html" class="nav-link">
+                            <i class="fas fa-table"></i>
+                            <span>Tables</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="billing.html" class="nav-link">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Billing</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profile.html" class="nav-link">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sign-in.html" class="nav-link">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span>Login</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sign-up.html" class="nav-link">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Sign Up</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h2 class="page-title">Dashboard</h2>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Type here...">
+                    </div>
+                    <div class="header-actions">
+                        <button class="action-btn notification-btn" title="Notifications">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                        <button class="action-btn settings-btn" title="Settings">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Stats Cards Row -->
+                <div class="row stats-row">
+                    <div class="card stats-card">
+                        <div class="card-body">
+                            <div class="stats-icon money-icon">
+                                <i class="fas fa-money-bill"></i>
+                            </div>
+                            <div class="stats-info">
+                                <p class="stats-title">Today's Money</p>
+                                <h3 class="stats-value">$53,000</h3>
+                                <p class="stats-change positive">+55% <span>since yesterday</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card stats-card">
+                        <div class="card-body">
+                            <div class="stats-icon users-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="stats-info">
+                                <p class="stats-title">Today's Users</p>
+                                <h3 class="stats-value">2,300</h3>
+                                <p class="stats-change positive">+3% <span>since last week</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card stats-card">
+                        <div class="card-body">
+                            <div class="stats-icon clients-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="stats-info">
+                                <p class="stats-title">New Clients</p>
+                                <h3 class="stats-value">+3,462</h3>
+                                <p class="stats-change negative">-2% <span>since last quarter</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card stats-card">
+                        <div class="card-body">
+                            <div class="stats-icon sales-icon">
+                                <i class="fas fa-cart-plus"></i>
+                            </div>
+                            <div class="stats-info">
+                                <p class="stats-title">Sales</p>
+                                <h3 class="stats-value">$103,430</h3>
+                                <p class="stats-change positive">+5% <span>than last month</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Row -->
+                <div class="row charts-row">
+                    <div class="card chart-card">
+                        <div class="card-header">
+                            <h4>Website Views</h4>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="websiteViewsChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card chart-card">
+                        <div class="card-header">
+                            <h4>Daily Sales</h4>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="dailySalesChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects Table -->
+                <div class="row">
+                    <div class="card table-card">
+                        <div class="card-header">
+                            <h4>Projects</h4>
+                        </div>
+                        <div class="card-body">
+                            <table class="projects-table">
+                                <thead>
+                                    <tr>
+                                        <th>Project</th>
+                                        <th>Budget</th>
+                                        <th>Status</th>
+                                        <th>Completion</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="project-info">
+                                                <span class="project-name">Soft UI XD Version</span>
+                                            </div>
+                                        </td>
+                                        <td>$14,000</td>
+                                        <td><span class="status-badge working">Working</span></td>
+                                        <td>
+                                            <div class="progress-container">
+                                                <div class="progress-bar" style="width: 60%"></div>
+                                                <span class="progress-text">60%</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button class="btn-action">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="project-info">
+                                                <span class="project-name">Add Progress Track</span>
+                                            </div>
+                                        </td>
+                                        <td>$3,000</td>
+                                        <td><span class="status-badge done">Done</span></td>
+                                        <td>
+                                            <div class="progress-container">
+                                                <div class="progress-bar" style="width: 100%"></div>
+                                                <span class="progress-text">100%</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button class="btn-action">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="project-info">
+                                                <span class="project-name">Fix Platform Errors</span>
+                                            </div>
+                                        </td>
+                                        <td>Not set</td>
+                                        <td><span class="status-badge error">Error</span></td>
+                                        <td>
+                                            <div class="progress-container">
+                                                <div class="progress-bar" style="width: 30%"></div>
+                                                <span class="progress-text">30%</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button class="btn-action">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="project-info">
+                                                <span class="project-name">Launch New Website</span>
+                                            </div>
+                                        </td>
+                                        <td>$2,500</td>
+                                        <td><span class="status-badge pending">Pending</span></td>
+                                        <td>
+                                            <div class="progress-container">
+                                                <div class="progress-bar" style="width: 80%"></div>
+                                                <span class="progress-text">80%</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button class="btn-action">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="project-info">
+                                                <span class="project-name">Redesign New Online Shop</span>
+                                            </div>
+                                        </td>
+                                        <td>$2,000</td>
+                                        <td><span class="status-badge working">Working</span></td>
+                                        <td>
+                                            <div class="progress-container">
+                                                <div class="progress-bar" style="width: 45%"></div>
+                                                <span class="progress-text">45%</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button class="btn-action">
+                                                <i class="fas fa-ellipsis-v"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Overview & Orders Row -->
+                <div class="row">
+                    <!-- Notification Demo Card -->
+                    <div class="card demo-card">
+                        <div class="card-header">
+                            <h4>Notification System Demo</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="mb-3">Click the buttons below to test different notification types:</p>
+                            <div class="demo-buttons">
+                                <button id="demo-success-notification" class="btn btn-success">
+                                    <i class="fas fa-check-circle"></i> Success
+                                </button>
+                                <button id="demo-error-notification" class="btn btn-danger">
+                                    <i class="fas fa-exclamation-circle"></i> Error
+                                </button>
+                                <button id="demo-info-notification" class="btn btn-info">
+                                    <i class="fas fa-info-circle"></i> Info
+                                </button>
+                                <button id="demo-warning-notification" class="btn btn-warning">
+                                    <i class="fas fa-exclamation-triangle"></i> Warning
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                
+                <!-- Overview Card -->
+                    <div class="card overview-card">
+                        <div class="card-header">
+                            <h4>Orders Overview</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="timeline">
+                                <li class="timeline-item">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-bell"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h5>$2400, Design changes</h5>
+                                        <p>22 DEC 7:20 PM</p>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h5>New order #1832412</h5>
+                                        <p>21 DEC 11:21 PM</p>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h5>Server payments for April</h5>
+                                        <p>21 DEC 9:28 PM</p>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-credit-card"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h5>New card added for order #4395133</h5>
+                                        <p>20 DEC 2:20 AM</p>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <div class="timeline-icon">
+                                        <i class="fas fa-key"></i>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h5>Unlock packages for development</h5>
+                                        <p>18 DEC 4:54 AM</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/performance.js" defer></script>
+    <script src="js/localization.js"></script>
+    <script src="js/theme-switcher.js"></script>
+</body>
+</html>

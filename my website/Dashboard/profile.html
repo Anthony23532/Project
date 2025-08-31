@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Soft UI Dashboard - A beautiful dashboard template with a soft UI design">
+    <meta name="theme-color" content="#ffffff">
+    <title>Profile - FEHU</title>
+    <!-- Preload critical assets -->
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3 class="logo">FEHU Oil and Gas</h3>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="sidebar-content">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tables.html" class="nav-link">
+                            <i class="fas fa-table"></i>
+                            <span>Tables</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="billing.html" class="nav-link">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Billing</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="profile.html" class="nav-link">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sign-in.html" class="nav-link">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span>Sign In</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sign-up.html" class="nav-link">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Sign Up</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h2 class="page-title">Profile</h2>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Type here...">
+                    </div>
+                    <div class="header-actions">
+                        <button class="action-btn notification-btn" title="Notifications">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">8</span>
+                        </button>
+                        <button class="action-btn settings-btn" title="Settings">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Profile Content -->
+            <div class="profile-content">
+                <!-- Profile Header -->
+                <div class="profile-header">
+                    <div class="profile-cover">
+                        <img src="assets/img/cover.avif" alt="Profile Cover">
+                        <div class="profile-avatar-wrapper">
+                            <div class="profile-avatar">
+                                <img src="assets/img/32.jpg" alt="User Avatar">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <div class="profile-actions">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-pencil-alt"></i> Edit Profile
+                            </button>
+                            <button class="btn btn-light">
+                                <i class="fas fa-envelope"></i> Message
+                            </button>
+                        </div>
+                        <div class="profile-details">
+                            <h1 class="profile-name">Collins Chukwuebuka</h1>
+                            <p class="profile-role">Senior Product Designer</p>
+                            <div class="profile-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>New York, USA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Content Sections -->
+                <div class="profile-sections">
+                    <!-- Left Column -->
+                    <div class="profile-column">
+
+                        <!-- Platform Settings Card -->
+                        <div class="card profile-card">
+                            <div class="card-header">
+                                <h4>Platform Settings</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="settings-section">
+                                    <h5 class="settings-title">Account</h5>
+                                    <div class="setting-item">
+                                        <div class="custom-switch">
+                                            <input type="checkbox" id="emailNotifications" checked>
+                                            <label for="emailNotifications"></label>
+                                        </div>
+                                        <div class="setting-info">
+                                            <div class="setting-name">Email Notifications</div>
+                                            <div class="setting-description">Receive email notifications for new messages and updates</div>
+                                        </div>
+                                    </div>
+                                    <div class="setting-item">
+                                        <div class="custom-switch">
+                                            <input type="checkbox" id="smsNotifications">
+                                            <label for="smsNotifications"></label>
+                                        </div>
+                                        <div class="setting-info">
+                                            <div class="setting-name">SMS Notifications</div>
+                                            <div class="setting-description">Receive SMS notifications for important alerts</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="settings-section">
+                                    <h5 class="settings-title">Application</h5>
+                                    <div class="setting-item">
+                                        <div class="custom-switch">
+                                            <input type="checkbox" id="newLaunches" checked>
+                                            <label for="newLaunches"></label>
+                                        </div>
+                                        <div class="setting-info">
+                                            <div class="setting-name">New Launches and Projects</div>
+                                            <div class="setting-description">Receive notifications for new project launches</div>
+                                        </div>
+                                    </div>
+                                    <div class="setting-item">
+                                        <div class="custom-switch">
+                                            <input type="checkbox" id="monthlyReport" checked>
+                                            <label for="monthlyReport"></label>
+                                        </div>
+                                        <div class="setting-info">
+                                            <div class="setting-name">Monthly Report</div>
+                                            <div class="setting-description">Receive monthly performance reports</div>
+                                        </div>
+                                    </div>
+                                    <div class="setting-item">
+                                        <div class="custom-switch">
+                                            <input type="checkbox" id="subscribeNewsletter">
+                                            <label for="subscribeNewsletter"></label>
+                                        </div>
+                                        <div class="setting-info">
+                                            <div class="setting-name">Subscribe to Newsletter</div>
+                                            <div class="setting-description">Receive our weekly newsletter with industry updates</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column -->
+                    <div class="profile-column">
+                        <!-- Conversations Card -->
+                        <div class="card profile-card">
+                            <div class="card-header">
+                                <h4>Conversations</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="conversations-list">
+                                    <div class="conversation-item">
+                                        <div class="conversation-avatar">
+                                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sophie B.">
+                                            <span class="status-indicator online"></span>
+                                        </div>
+                                        <div class="conversation-content">
+                                            <div class="conversation-info">
+                                                <h5 class="conversation-name">Sophie B.</h5>
+                                                <span class="conversation-time">5 mins ago</span>
+                                            </div>
+                                            <p class="conversation-message">Hi! I need more information about the project timeline.</p>
+                                        </div>
+                                        <div class="conversation-actions">
+                                            <button class="btn-action">
+                                                <i class="fas fa-reply"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="conversation-item">
+                                        <div class="conversation-avatar">
+                                            <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Alexander">
+                                            <span class="status-indicator offline"></span>
+                                        </div>
+                                        <div class="conversation-content">
+                                            <div class="conversation-info">
+                                                <h5 class="conversation-name">Alexander</h5>
+                                                <span class="conversation-time">1 hour ago</span>
+                                            </div>
+                                            <p class="conversation-message">The designs look great! I've shared them with the team.</p>
+                                        </div>
+                                        <div class="conversation-actions">
+                                            <button class="btn-action">
+                                                <i class="fas fa-reply"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="conversation-item">
+                                        <div class="conversation-avatar">
+                                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Anne Marie">
+                                            <span class="status-indicator online"></span>
+                                        </div>
+                                        <div class="conversation-content">
+                                            <div class="conversation-info">
+                                                <h5 class="conversation-name">Anne Marie</h5>
+                                                <span class="conversation-time">Yesterday</span>
+                                            </div>
+                                            <p class="conversation-message">Can we schedule a call to discuss the new features?</p>
+                                        </div>
+                                        <div class="conversation-actions">
+                                            <button class="btn-action">
+                                                <i class="fas fa-reply"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="conversation-item">
+                                        <div class="conversation-avatar">
+                                            <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Michael">
+                                            <span class="status-indicator away"></span>
+                                        </div>
+                                        <div class="conversation-content">
+                                            <div class="conversation-info">
+                                                <h5 class="conversation-name">Michael</h5>
+                                                <span class="conversation-time">2 days ago</span>
+                                            </div>
+                                            <p class="conversation-message">I've reviewed the documents and have some feedback.</p>
+                                        </div>
+                                        <div class="conversation-actions">
+                                            <button class="btn-action">
+                                                <i class="fas fa-reply"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/performance.js" defer></script>
+    <script src="js/localization.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/data-export.js"></script>
+    <script src="js/profile.js" defer></script>
+</body>
+</html>

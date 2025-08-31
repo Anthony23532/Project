@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Soft UI Dashboard - A beautiful dashboard template with a soft UI design">
+    <meta name="theme-color" content="#ffffff">
+    <title>Billing - FEHU</title>
+    <!-- Preload critical assets -->
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/billing.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3 class="logo">FEHU Oil and Gas</h3>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="sidebar-content">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tables.html" class="nav-link">
+                            <i class="fas fa-table"></i>
+                            <span>Tables</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="billing.html" class="nav-link">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Billing</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="profile.html" class="nav-link">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sign-in.html" class="nav-link">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <span>Login</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sign-up.html" class="nav-link">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Sign Up</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <h2 class="page-title">Billing</h2>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Type here...">
+                    </div>
+                    <div class="header-actions">
+                        <button class="action-btn notification-btn" title="Notifications">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-badge">3</span>
+                        </button>
+                        <button class="action-btn settings-btn" title="Settings">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Billing Content -->
+            <div class="billing-content">
+                <!-- Payment Methods & Invoices Row -->
+                <div class="billing-row">
+                    <!-- Payment Methods Card -->
+                    <div class="card payment-methods-card">
+                        <div class="card-header">
+                            <h4>Payment Methods</h4>
+                            <button class="btn btn-sm btn-primary" id="addPaymentMethod">
+                                <i class="fas fa-plus"></i> Add New Card
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="payment-methods">
+                                <div class="payment-method">
+                                    <div class="payment-card visa">
+                                        <div class="card-logo">
+                                            <i class="fab fa-cc-visa"></i>
+                                        </div>
+                                        <div class="card-number">**** **** **** 4242</div>
+                                        <div class="card-details">
+                                            <div class="card-holder">Thomas Jude</div>
+                                            <div class="card-expiry">11/24</div>
+                                        </div>
+                                    </div>
+                                    <div class="payment-actions">
+                                        <button class="btn-icon btn-edit" title="Edit">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </button>
+                                        <button class="btn-icon btn-delete" title="Delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="payment-method">
+                                    <div class="payment-card mastercard">
+                                        <div class="card-logo">
+                                            <i class="fab fa-cc-mastercard"></i>
+                                        </div>
+                                        <div class="card-number">**** **** **** 5678</div>
+                                        <div class="card-details">
+                                            <div class="card-holder">Collins Anthony</div>
+                                            <div class="card-expiry">08/26</div>
+                                        </div>
+                                    </div>
+                                    <div class="payment-actions">
+                                        <button class="btn-icon btn-edit" title="Edit">
+                                            <i class="fas fa-pencil-alt"></i>
+                                        </button>
+                                        <button class="btn-icon btn-delete" title="Delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Invoices Card -->
+                    <div class="card invoices-card">
+                        <div class="card-header">
+                            <h4>Invoices</h4>
+                            <button class="btn btn-sm btn-light" id="downloadAll">
+                                <i class="fas fa-download"></i> Download All
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="invoices-list">
+                                <div class="invoice-item">
+                                    <div class="invoice-info">
+                                        <h5 class="invoice-title">March, 01, 2023</h5>
+                                        <p class="invoice-id">#MS-415646</p>
+                                    </div>
+                                    <div class="invoice-amount">$180</div>
+                                    <div class="invoice-actions">
+                                        <button class="btn btn-sm btn-light invoice-btn">
+                                            <i class="fas fa-file-pdf"></i> PDF
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="invoice-item">
+                                    <div class="invoice-info">
+                                        <h5 class="invoice-title">February, 10, 2023</h5>
+                                        <p class="invoice-id">#RV-126749</p>
+                                    </div>
+                                    <div class="invoice-amount">$250</div>
+                                    <div class="invoice-actions">
+                                        <button class="btn btn-sm btn-light invoice-btn">
+                                            <i class="fas fa-file-pdf"></i> PDF
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="invoice-item">
+                                    <div class="invoice-info">
+                                        <h5 class="invoice-title">January, 05, 2023</h5>
+                                        <p class="invoice-id">#QW-103578</p>
+                                    </div>
+                                    <div class="invoice-amount">$120</div>
+                                    <div class="invoice-actions">
+                                        <button class="btn btn-sm btn-light invoice-btn">
+                                            <i class="fas fa-file-pdf"></i> PDF
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="invoice-item">
+                                    <div class="invoice-info">
+                                        <h5 class="invoice-title">December, 15, 2022</h5>
+                                        <p class="invoice-id">#MS-415646</p>
+                                    </div>
+                                    <div class="invoice-amount">$180</div>
+                                    <div class="invoice-actions">
+                                        <button class="btn btn-sm btn-light invoice-btn">
+                                            <i class="fas fa-file-pdf"></i> PDF
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="invoice-item">
+                                    <div class="invoice-info">
+                                        <h5 class="invoice-title">November, 01, 2022</h5>
+                                        <p class="invoice-id">#RV-126749</p>
+                                    </div>
+                                    <div class="invoice-amount">$250</div>
+                                    <div class="invoice-actions">
+                                        <button class="btn btn-sm btn-light invoice-btn">
+                                            <i class="fas fa-file-pdf"></i> PDF
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Billing Information Row -->
+                <div class="billing-row">
+                    <!-- Billing Information Card -->
+                    <div class="card billing-info-card">
+                        <div class="card-header">
+                            <h4>Billing Information</h4>
+                            <button class="btn btn-sm btn-primary" id="editBillingInfo">
+                                <i class="fas fa-pencil-alt"></i> Edit
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="billing-info-content">
+                                <div class="billing-info-section">
+                                    <h5 class="section-title">Contact Information</h5>
+                                    <div class="info-group">
+                                        <div class="info-label">Full Name:</div>
+                                        <div class="info-value">Collins Chukwuebuka Anthony</div>
+                                    </div>
+                                    <div class="info-group">
+                                        <div class="info-label">Email:</div>
+                                        <div class="info-value">john@example.com</div>
+                                    </div>
+                                    <div class="info-group">
+                                        <div class="info-label">Phone:</div>
+                                        <div class="info-value">+1 (555) 123-4567</div>
+                                    </div>
+                                </div>
+                                <div class="billing-info-section">
+                                    <h5 class="section-title">Billing Address</h5>
+                                    <div class="info-group">
+                                        <div class="info-label">Street:</div>
+                                        <div class="info-value">123 Main Street, Apt 4B</div>
+                                    </div>
+                                    <div class="info-group">
+                                        <div class="info-label">City:</div>
+                                        <div class="info-value">New York</div>
+                                    </div>
+                                    <div class="info-group">
+                                        <div class="info-label">State/Province:</div>
+                                        <div class="info-value">NY</div>
+                                    </div>
+                                    <div class="info-group">
+                                        <div class="info-label">Postal Code:</div>
+                                        <div class="info-value">10001</div>
+                                    </div>
+                                    <div class="info-group">
+                                        <div class="info-label">Country:</div>
+                                        <div class="info-value">United States</div>
+                                    </div>
+                                </div>
+                                <div class="billing-info-section">
+                                    <h5 class="section-title">Subscription Details</h5>
+                                    <div class="info-group">
+                                        <div class="info-label">Plan:</div>
+                                        <div class="info-value">Premium</div>
+                                    </div>
+                                    <div class="info-group">
+                                        <div class="info-label">Billing Cycle:</div>
+                                        <div class="info-value">Monthly</div>
+                                    </div>
+                                    <div class="info-group">
+                                        <div class="info-label">Next Payment:</div>
+                                        <div class="info-value">April 01, 2023</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Subscription Card -->
+                    <div class="card subscription-card">
+                        <div class="card-header">
+                            <h4>Your Subscription</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="current-plan">
+                                <div class="plan-badge premium">Premium Plan</div>
+                                <h5 class="plan-price">$49<span>/month</span></h5>
+                                <p class="plan-description">The premium plan gives you full access to all features and priority support.</p>
+                                <div class="plan-actions">
+                                    <button class="btn btn-primary" id="changePlan">Change Plan</button>
+                                    <button class="btn btn-light" id="cancelSubscription">Cancel</button>
+                                </div>
+                            </div>
+                            <div class="plan-features">
+                                <h5 class="features-title">What's included:</h5>
+                                <ul class="features-list">
+                                    <li class="feature-item">
+                                        <i class="fas fa-check"></i>
+                                        <span>Complete documentation</span>
+                                    </li>
+                                    <li class="feature-item">
+                                        <i class="fas fa-check"></i>
+                                        <span>Working materials in Sketch</span>
+                                    </li>
+                                    <li class="feature-item">
+                                        <i class="fas fa-check"></i>
+                                        <span>2GB cloud storage</span>
+                                    </li>
+                                    <li class="feature-item">
+                                        <i class="fas fa-check"></i>
+                                        <span>100 team members</span>
+                                    </li>
+                                    <li class="feature-item">
+                                        <i class="fas fa-check"></i>
+                                        <span>Premium support</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transactions Row -->
+                <div class="billing-row">
+                    <!-- Transactions Card -->
+                    <div class="card transactions-card">
+                        <div class="card-header">
+                            <h4>Your Transactions</h4>
+                            <div class="card-actions">
+                                <div class="date-filter">
+                                    <label for="transactionDateFilter">Filter by date:</label>
+                                    <select id="transactionDateFilter">
+                                        <option value="newest">Newest</option>
+                                        <option value="last-week">Last 7 days</option>
+                                        <option value="last-month">Last 30 days</option>
+                                        <option value="all">All time</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="transactions-list">
+                                <div class="transaction-item">
+                                    <div class="transaction-icon deposit">
+                                        <i class="fas fa-arrow-down"></i>
+                                    </div>
+                                    <div class="transaction-info">
+                                        <h5 class="transaction-title">Oil</h5>
+                                        <p class="transaction-date">27 March 2023, at 12:30 PM</p>
+                                    </div>
+                                    <div class="transaction-amount deposit">+$2,500</div>
+                                </div>
+                                <div class="transaction-item">
+                                    <div class="transaction-icon withdrawal">
+                                        <i class="fas fa-arrow-up"></i>
+                                    </div>
+                                    <div class="transaction-info">
+                                        <h5 class="transaction-title">Transport</h5>
+                                        <p class="transaction-date">23 March 2023, at 4:30 PM</p>
+                                    </div>
+                                    <div class="transaction-amount withdrawal">-$2,000</div>
+                                </div>
+                                <div class="transaction-item">
+                                    <div class="transaction-icon deposit">
+                                        <i class="fas fa-arrow-down"></i>
+                                    </div>
+                                    <div class="transaction-info">
+                                        <h5 class="transaction-title">30 Gallons of Oil</h5>
+                                        <p class="transaction-date">20 March 2023, at 1:45 PM</p>
+                                    </div>
+                                    <div class="transaction-amount deposit">+$750</div>
+                                </div>
+                                <div class="transaction-item">
+                                    <div class="transaction-icon withdrawal">
+                                        <i class="fas fa-arrow-up"></i>
+                                    </div>
+                                    <div class="transaction-info">
+                                        <h5 class="transaction-title">HubSpot</h5>
+                                        <p class="transaction-date">17 March 2023, at 11:30 AM</p>
+                                    </div>
+                                    <div class="transaction-amount withdrawal">-$1,000</div>
+                                </div>
+                                <div class="transaction-item">
+                                    <div class="transaction-icon deposit">
+                                        <i class="fas fa-arrow-down"></i>
+                                    </div>
+                                    <div class="transaction-info">
+                                        <h5 class="transaction-title">Creative Tim</h5>
+                                        <p class="transaction-date">15 March 2023, at 2:00 PM</p>
+                                    </div>
+                                    <div class="transaction-amount deposit">+$2,500</div>
+                                </div>
+                                <div class="transaction-item">
+                                    <div class="transaction-icon withdrawal">
+                                        <i class="fas fa-arrow-up"></i>
+                                    </div>
+                                    <div class="transaction-info">
+                                        <h5 class="transaction-title">Webflow</h5>
+                                        <p class="transaction-date">12 March 2023, at 9:30 AM</p>
+                                    </div>
+                                    <div class="transaction-amount withdrawal">-$800</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add Payment Method Modal -->
+    <div class="modal" id="paymentMethodModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Add New Payment Method</h4>
+                <button class="modal-close" id="closePaymentModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="paymentMethodForm">
+                    <div class="form-group">
+                        <label for="cardholderName">Cardholder Name</label>
+                        <input type="text" id="cardholderName" name="cardholderName" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <div class="card-number-input">
+                            <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                            <div class="card-type-icons">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fab fa-cc-amex"></i>
+                                <i class="fab fa-cc-discover"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="expiryDate">Expiry Date</label>
+                            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+                        <div class="form-group half">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" id="saveCard" name="saveCard" checked>
+                            <label for="saveCard">Save this card for future payments</label>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-light" id="cancelPaymentForm">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Add Card</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Billing Info Modal -->
+    <div class="modal" id="billingInfoModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Edit Billing Information</h4>
+                <button class="modal-close" id="closeBillingModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="billingInfoForm">
+                    <div class="form-section">
+                        <h5 class="form-section-title">Contact Information</h5>
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" value="John Michael Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" value="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" value="+1 (555) 123-4567" required>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <h5 class="form-section-title">Billing Address</h5>
+                        <div class="form-group">
+                            <label for="street">Street</label>
+                            <input type="text" id="street" name="street" value="123 Main Street, Apt 4B" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" value="New York" required>
+                            </div>
+                            <div class="form-group half">
+                                <label for="state">State/Province</label>
+                                <input type="text" id="state" name="state" value="NY" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="postalCode">Postal Code</label>
+                                <input type="text" id="postalCode" name="postalCode" value="10001" required>
+                            </div>
+                            <div class="form-group half">
+                                <label for="country">Country</label>
+                                <select id="country" name="country" required>
+                                    <option value="US" selected>United States</option>
+                                    <option value="CA">Canada</option>
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="DE">Germany</option>
+                                    <option value="FR">France</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-light" id="cancelBillingForm">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Change Plan Modal -->
+    <div class="modal" id="changePlanModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Change Subscription Plan</h4>
+                <button class="modal-close" id="closePlanModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="plans-container">
+                    <div class="plan-option">
+                        <div class="plan-header">
+                            <h5 class="plan-name">Basic</h5>
+                            <div class="plan-price">$29<span>/month</span></div>
+                        </div>
+                        <div class="plan-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Complete documentation</li>
+                                <li><i class="fas fa-check"></i> Basic components</li>
+                                <li><i class="fas fa-check"></i> 500MB storage</li>
+                                <li><i class="fas fa-check"></i> 20 team members</li>
+                                <li><i class="fas fa-times"></i> Premium support</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-outline">Choose Plan</button>
+                    </div>
+                    <div class="plan-option current">
+                        <div class="plan-badge">Current Plan</div>
+                        <div class="plan-header">
+                            <h5 class="plan-name">Premium</h5>
+                            <div class="plan-price">$49<span>/month</span></div>
+                        </div>
+                        <div class="plan-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Complete documentation</li>
+                                <li><i class="fas fa-check"></i> Working materials in Sketch</li>
+                                <li><i class="fas fa-check"></i> 2GB cloud storage</li>
+                                <li><i class="fas fa-check"></i> 100 team members</li>
+                                <li><i class="fas fa-check"></i> Premium support</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary" disabled>Current Plan</button>
+                    </div>
+                    <div class="plan-option">
+                        <div class="plan-header">
+                            <h5 class="plan-name">Enterprise</h5>
+                            <div class="plan-price">$99<span>/month</span></div>
+                        </div>
+                        <div class="plan-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Complete documentation</li>
+                                <li><i class="fas fa-check"></i> Working materials in Sketch</li>
+                                <li><i class="fas fa-check"></i> 10GB cloud storage</li>
+                                <li><i class="fas fa-check"></i> Unlimited team members</li>
+                                <li><i class="fas fa-check"></i> 24/7 Premium support</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-outline">Choose Plan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cancel Subscription Modal -->
+    <div class="modal" id="cancelSubscriptionModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Cancel Subscription</h4>
+                <button class="modal-close" id="closeCancelModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="cancel-subscription-content">
+                    <div class="warning-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h5>Are you sure you want to cancel your subscription?</h5>
+                    <p>Canceling your subscription will result in the loss of all premium features at the end of your current billing period. Your subscription will remain active until April 01, 2023.</p>
+                    <div class="form-group">
+                        <label for="cancelReason">Please tell us why you're canceling:</label>
+                        <select id="cancelReason" name="cancelReason" required>
+                            <option value="">Select a reason</option>
+                            <option value="too-expensive">Too expensive</option>
+                            <option value="not-using">Not using the service enough</option>
+                            <option value="missing-features">Missing features I need</option>
+                            <option value="switching">Switching to another service</option>
+                            <option value="other">Other reason</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="otherReasonGroup" style="display: none;">
+                        <label for="otherReason">Please specify:</label>
+                        <textarea id="otherReason" name="otherReason" rows="3"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-light" id="keepSubscription">Keep Subscription</button>
+                        <button type="button" class="btn btn-danger" id="confirmCancel">Cancel Subscription</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/performance.js" defer></script>
+    <script src="js/localization.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/data-export.js"></script>
+    <script src="js/billing.js" defer></script>
+</body>
+</html>
